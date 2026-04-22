@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV MATIAS GALO (ANDREA) - Líder Técnico Senior</title>
+    <title>CV MATIAS GALO (ANDREA) - Desarrollador Fullstack Senior</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
@@ -254,6 +254,25 @@
             font-weight: 500;
         }
 
+        .qr-section {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .qr-section img {
+            width: 130px;
+            height: 130px;
+            background: white;
+            padding: 8px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+
+        .qr-section p {
+            font-size: 0.8rem;
+            color: #add8e6;
+        }
+
         @media print {
             body {
                 padding: 0;
@@ -276,7 +295,9 @@
                 color: #0056b3 !important;
             }
 
-            .job-card, .skill-box, .sidebar-section {
+            .job-card,
+            .skill-box,
+            .sidebar-section {
                 page-break-inside: avoid;
                 break-inside: avoid;
             }
@@ -287,7 +308,8 @@
                 grid-template-columns: 1fr;
             }
 
-            .cv-sidebar, .cv-main {
+            .cv-sidebar,
+            .cv-main {
                 padding: 40px;
             }
         }
@@ -306,10 +328,12 @@
                 margin-top: 4px;
             }
 
-            .cv-sidebar, .cv-main {
+            .cv-sidebar,
+            .cv-main {
                 padding: 30px 20px;
             }
         }
+
         /* Modo Impresión B/N (Toggled by btn) */
         body.bw-theme .cv-sidebar {
             background-color: #ffffff !important;
@@ -349,6 +373,10 @@
             border-top: 3px solid #666;
         }
 
+        body.bw-theme .qr-section p {
+            color: #333 !important;
+        }
+
         .theme-toggle-btn {
             position: fixed;
             top: 20px;
@@ -361,7 +389,7 @@
             cursor: pointer;
             font-family: 'Inter', sans-serif;
             font-weight: 600;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             z-index: 1000;
             transition: all 0.3s;
         }
@@ -395,8 +423,10 @@
                 <ul class="contact-info">
                     <li><i class="fas fa-map-marker-alt"></i> Chaco, Argentina</li>
                     <li><i class="fas fa-phone"></i> +54 362 4278762</li>
-                    <li><i class="fas fa-envelope"></i> <a href="mailto:andreamatiasgalo@gmail.com">andreamatiasgalo@gmail.com</a></li>
-                    <li><i class="fas fa-link"></i> <a href="https://www.linkedin.com/in/matias-andrea-a93a3b2a/" target="_blank">linkedin.com/in/matias-andrea-a93a3b2a</a></li>
+                    <li><i class="fas fa-envelope"></i> <a
+                            href="mailto:andreamatiasgalo@gmail.com">andreamatiasgalo@gmail.com</a></li>
+                    <li><i class="fas fa-link"></i> <a href="https://www.linkedin.com/in/matias-andrea-a93a3b2a/"
+                            target="_blank">linkedin.com/in/matias-andrea-a93a3b2a</a></li>
                 </ul>
             </section>
 
@@ -442,6 +472,9 @@
                     <li>Español: Nativo</li>
                     <li>Inglés: Avanzado (Técnico)</li>
                 </ul>
+            <section class="qr-section">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://matiasgalo999.github.io/cv/&margin=0" alt="Código QR">
+                <p>Escaneá para ver el CV online</p>
             </section>
         </aside>
 
@@ -591,7 +624,7 @@
             </section>
         </main>
     </div>
-    
+
     <script>
         function toggleTheme() {
             document.body.classList.toggle('bw-theme');
