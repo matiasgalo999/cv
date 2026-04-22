@@ -310,6 +310,10 @@
             }
         }
 
+        .mobile-only {
+            display: none;
+        }
+
         @media (max-width: 850px) {
             .cv-wrapper {
                 grid-template-columns: 1fr;
@@ -322,6 +326,34 @@
         }
 
         @media (max-width: 600px) {
+            .desktop-visible {
+                display: none;
+            }
+            .desktop-visible.expanded {
+                display: block;
+            }
+            .mobile-only {
+                display: block;
+                width: 100%;
+                text-align: center;
+                background: rgba(255, 255, 255, 0.1);
+                color: #add8e6;
+                border: 1px solid rgba(255,255,255,0.2);
+                padding: 12px;
+                border-radius: 6px;
+                margin-top: 15px;
+                margin-bottom: 5px;
+                cursor: pointer;
+                font-family: inherit;
+                font-weight: 600;
+                transition: all 0.3s;
+            }
+            body.bw-theme .mobile-only {
+                background: #f0f0f0;
+                color: #333;
+                border: 1px solid #ccc;
+            }
+
             body {
                 padding: 15px 5px;
             }
@@ -458,7 +490,10 @@
                 </ul>
             </section>
 
-            <section class="sidebar-section">
+            <button id="toggle-sidebar-btn" class="mobile-only" onclick="toggleMobileSidebar()">Ver más detalles <i class="fas fa-chevron-down"></i></button>
+
+            <div id="collapsible-sidebar" class="desktop-visible">
+                <section class="sidebar-section">
                 <h2>Certificaciones Destacadas</h2>
                 <div class="tag-container">
                     <span class="tag">Desarrollo Estratégico con IA</span>
@@ -504,6 +539,7 @@
                 <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://matiasgalo999.github.io/cv/&margin=0" alt="Código QR">
                 <p>Escaneá para ver el CV online</p>
             </section>
+            </div>
         </aside>
 
         <!-- Main Content -->
@@ -661,6 +697,19 @@
                 btn.innerHTML = '<i class="fas fa-palette"></i> Modo Color';
             } else {
                 btn.innerHTML = '<i class="fas fa-print"></i> Modo B/N';
+            }
+        }
+
+        function toggleMobileSidebar() {
+            const sidebarContent = document.getElementById('collapsible-sidebar');
+            const btn = document.getElementById('toggle-sidebar-btn');
+            
+            sidebarContent.classList.toggle('expanded');
+            
+            if (sidebarContent.classList.contains('expanded')) {
+                btn.innerHTML = 'Ocultar detalles <i class="fas fa-chevron-up"></i>';
+            } else {
+                btn.innerHTML = 'Ver más detalles <i class="fas fa-chevron-down"></i>';
             }
         }
     </script>
