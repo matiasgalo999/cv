@@ -27,6 +27,11 @@
             box-sizing: border-box;
         }
 
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--bg-body);
@@ -315,6 +320,14 @@
         }
 
         @media (max-width: 600px) {
+            html {
+                font-size: 15px; /* Reduce ligeramente todo el tamaño base rem */
+            }
+
+            .name-banner h1 {
+                font-size: 1.8rem;
+            }
+
             .skills-grid {
                 grid-template-columns: 1fr;
             }
