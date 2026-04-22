@@ -114,6 +114,8 @@
             color: var(--white);
             text-decoration: none;
             opacity: 0.9;
+            word-break: break-word;
+            overflow-wrap: anywhere;
         }
 
         .tag-container {
@@ -320,12 +322,25 @@
         }
 
         @media (max-width: 600px) {
+            body {
+                padding: 15px 5px;
+            }
+
             html {
                 font-size: 15px; /* Reduce ligeramente todo el tamaño base rem */
             }
 
             .name-banner h1 {
                 font-size: 1.8rem;
+                overflow-wrap: break-word;
+            }
+
+            .name-banner p {
+                line-height: 1.4;
+            }
+
+            .cv-sidebar, .cv-main {
+                padding: 35px 25px;
             }
 
             .skills-grid {
