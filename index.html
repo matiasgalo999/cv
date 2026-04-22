@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV MATIAS GALO (ANDREA) - Líder Técnico Senior</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root {
+            --primary-dark: #002347;
+            /* Banking Deep Blue */
+            --primary-accent: #0056b3;
+            --secondary-accent: #00c853;
+            /* Success/Metric Green */
+            --text-main: #1a1a1a;
+            --text-muted: #4a5568;
+            --bg-body: #f4f7f6;
+            --white: #ffffff;
+            --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.5;
+            padding: 50px 20px;
+        }
+
+        .cv-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            box-shadow: var(--card-shadow);
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            min-height: 1200px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        /* Sidebar Section */
+        .cv-sidebar {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            padding: 50px 35px;
+        }
+
+        .name-banner {
+            margin-bottom: 40px;
+        }
+
+        .name-banner h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .name-banner p {
+            font-size: 0.95rem;
+            font-weight: 400;
+            opacity: 0.8;
+            color: #add8e6;
+        }
+
+        .sidebar-section {
+            margin-bottom: 45px;
+        }
+
+        .sidebar-section h2 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            color: #add8e6;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            padding-bottom: 8px;
+        }
+
+        .contact-info {
+            list-style: none;
+            font-size: 0.85rem;
+        }
+
+        .contact-info li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info li i {
+            width: 25px;
+            color: #add8e6;
+            margin-right: 8px;
+            text-align: center;
+        }
+
+        .contact-info a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.9;
+        }
+
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        /* Main Content Section */
+        .cv-main {
+            padding: 60px 60px;
+        }
+
+        .hero-summary {
+            margin-bottom: 45px;
+        }
+
+        .hero-summary p {
+            font-size: 1.15rem;
+            font-weight: 400;
+            color: var(--text-muted);
+            border-left: 5px solid var(--primary-accent);
+            padding-left: 25px;
+        }
+
+        .metric-badge {
+            display: inline-flex;
+            align-items: center;
+            background-color: #ebf8ff;
+            color: #2b6cb0;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .section-header {
+            font-size: 1.2rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary-dark);
+            margin-bottom: 25px;
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-header::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #e2e8f0;
+            margin-left: 20px;
+        }
+
+        .job-card {
+            margin-bottom: 40px;
+        }
+
+        .job-title-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .job-title-row h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .job-date {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .job-company {
+            color: var(--primary-accent);
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .achievement-list {
+            list-style: none;
+            padding-left: 5px;
+        }
+
+        .achievement-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            color: #2d3748;
+        }
+
+        .achievement-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary-accent);
+            font-weight: 800;
+        }
+
+        .achievement-list b {
+            color: var(--primary-dark);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .skill-box {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 6px;
+            border-top: 3px solid var(--primary-accent);
+        }
+
+        .skill-box h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            color: var(--primary-accent);
+        }
+
+        .skill-box p {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+            }
+
+            .cv-wrapper {
+                box-shadow: none;
+                border-radius: 0;
+                border: none;
+            }
+
+            .cv-sidebar {
+                background-color: #002347 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .achievement-list li::before {
+                color: #0056b3 !important;
+            }
+
+            .job-card, .skill-box, .sidebar-section {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 850px) {
+            .cv-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .cv-sidebar, .cv-main {
+                padding: 40px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .job-title-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .job-date {
+                margin-top: 4px;
+            }
+
+            .cv-sidebar, .cv-main {
+                padding: 30px 20px;
+            }
+        }
+        /* Modo Impresión B/N (Toggled by btn) */
+        body.bw-theme .cv-sidebar {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+            border-right: 1px solid #ddd;
+        }
+
+        body.bw-theme .cv-sidebar h1,
+        body.bw-theme .cv-sidebar h2,
+        body.bw-theme .cv-sidebar p,
+        body.bw-theme .cv-sidebar .contact-info a,
+        body.bw-theme .cv-sidebar .contact-info i {
+            color: #000000 !important;
+        }
+
+        body.bw-theme .tag {
+            background: #f0f0f0;
+            color: #000000;
+            border: 1px solid #ccc;
+        }
+
+        body.bw-theme .sidebar-section h2 {
+            border-bottom: 1px solid #ccc;
+        }
+
+        body.bw-theme .primary-accent,
+        body.bw-theme .job-company,
+        body.bw-theme .skill-box h4 {
+            color: #333 !important;
+        }
+
+        body.bw-theme .achievement-list li::before {
+            color: #333 !important;
+        }
+
+        body.bw-theme .skill-box {
+            border-top: 3px solid #666;
+        }
+
+        .theme-toggle-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #002347;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+
+        body.bw-theme .theme-toggle-btn {
+            background: #fff;
+            color: #000;
+            border: 1px solid #ccc;
+        }
+
+        @media print {
+            .theme-toggle-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button class="theme-toggle-btn" onclick="toggleTheme()"><i class="fas fa-print"></i> Modo B/N</button>
+    <div class="cv-wrapper">
+        <!-- Sidebar -->
+        <aside class="cv-sidebar">
+            <div class="name-banner">
+                <h1>MATIAS GALO (ANDREA)</h1>
+                <p>Desarrollador Fullstack Senior | Analista Funcional</p>
+            </div>
+
+            <section class="sidebar-section">
+                <h2>Contacto</h2>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> Chaco, Argentina</li>
+                    <li><i class="fas fa-phone"></i> +54 362 4278762</li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:andreamatiasgalo@gmail.com">andreamatiasgalo@gmail.com</a></li>
+                    <li><i class="fas fa-link"></i> <a href="https://www.linkedin.com/in/matias-andrea-a93a3b2a/" target="_blank">linkedin.com/in/matias-andrea-a93a3b2a</a></li>
+                </ul>
+            </section>
+
+            <section class="sidebar-section">
+                <h2>Certificaciones Destacadas</h2>
+                <div class="tag-container">
+                    <span class="tag">Desarrollo Estratégico con IA</span>
+                    <span class="tag">Scrum Grand Master (UTN)</span>
+                    <span class="tag">Experto UX/UI (UTN)</span>
+                    <span class="tag">Business Intelligence (UTN)</span>
+                    <span class="tag">Arquitecto Fullstack (UTN)</span>
+                </div>
+            </section>
+
+            <section class="sidebar-section">
+                <h2>Stack Tecnológico</h2>
+                <div class="tag-container">
+                    <span class="tag">Symfony (PHP)</span>
+                    <span class="tag">Django (Python)</span>
+                    <span class="tag">Laravel (PHP)</span>
+                    <span class="tag">Express (Node.js)</span>
+                    <span class="tag">Javascript</span>
+                    <span class="tag">React / Angular</span>
+                    <span class="tag">PostgreSQL / MongoDB / MySQL</span>
+                    <span class="tag">React Native</span>
+                    <span class="tag">Linux/Debian (Admin.)</span>
+                </div>
+            </section>
+
+            <section class="sidebar-section">
+                <h2>Experiencia Funcional</h2>
+                <div class="tag-container">
+                    <span class="tag">Relevamiento de requerimientos con usuarios</span>
+                    <span class="tag">Modelado de procesos</span>
+                    <span class="tag">Definición de soluciones técnicas alineadas al negocio</span>
+                    <span class="tag">Validación funcional de sistemas</span>
+                </div>
+            </section>
+
+            <section class="sidebar-section">
+                <h2>Idiomas</h2>
+                <ul class="contact-info">
+                    <li>Español: Nativo</li>
+                    <li>Inglés: Avanzado (Técnico)</li>
+                </ul>
+            </section>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="cv-main">
+            <header class="hero-summary">
+                <p>
+                    Desarrollador Fullstack Senior con más de 15 años de experiencia en sistemas de misión crítica,
+                    integración de servicios y manejo de datos sensibles.
+
+                    Experiencia en desarrollo mobile y backend, con participación activa en análisis funcional,
+                    relevamiento de requerimientos y diseño de soluciones.
+
+                    Enfoque en estabilidad, eficiencia operativa y mejora continua, incorporando herramientas de
+                    inteligencia artificial para optimización del desarrollo.
+                </p>
+            </header>
+
+            <h2 class="section-header">Experiencia Profesional</h2>
+
+            <div class="job-card">
+                <div class="job-title-row">
+                    <h3>Desarrollador Mobile Senior & Analista Técnico</h3>
+                    <span class="job-date">2022 – Actualidad</span>
+                </div>
+                <span class="job-company">Secretaría General de Gobernación – Modernización del Estado</span>
+                <ul class="achievement-list">
+                    <li><b>Interoperabilidad:</b> Integración de múltiples sistemas estatales mediante APIs,
+                        consolidando servicios en una plataforma unificada.</li>
+                    <li><b>Escala Masiva:</b> Liderazgo en el diseño e implementación de la solución Mobile para "Tu
+                        Gobierno Digital" (TGD), plataforma de alcance provincial con múltiples servicios
+                        integrados. </li>
+                    <li><b>Colaboración en Misión Crítica:</b> Participación activa en el análisis funcional y técnico
+                        para la integración de sistemas estatales complejos y trabajo con información sensible y
+                        sistemas que requieren alta disponibilidad.</li>
+                    <li><b>Aceleración con IA:</b> Uso de herramientas de IA para asistencia en desarrollo,
+                        automatización de tareas y mejora de calidad de código para la optimización del
+                        desarrollo mobile, reduciendo tiempos de refactorización y mejora de deuda técnica.</li>
+                </ul>
+            </div>
+
+            <div class="job-card">
+                <div class="job-title-row">
+                    <h3>Desarrollador Fullstack Senior</h3>
+                    <span class="job-date">2021 – Actualidad</span>
+                </div>
+                <span class="job-company">ECOM Chaco S.A.</span>
+                <ul class="achievement-list">
+
+                    <li><b>Desarrollo Fullstack & Mobile:</b> Construcción de plataformas corporativas
+
+                        usando stack React + Vite y backends Symfony/Django de alto rendimiento. Desarrollo de apps
+
+                        mobile para iOS y Android.</li>
+
+                    <li><b>Integración de Servicios:</b> Diseño de arquitecturas de APIs desacopladas para asegurar la
+
+                        resiliencia y escalabilidad de servicios digitales.</li>
+
+                    <li><b>Ingeniería de Software asistida con IA:</b> Diseño e implementación de un flujo de desarrollo
+                        basado en IA
+
+                        para generación de requerimientos (PRD), especificaciones técnicas, diseño de arquitectura y
+                        desarrollo de código,
+
+                        mejorando la velocidad de entrega y la consistencia técnica de los proyectos.</li>
+
+                    <li><b>Arquitectura de herramientas IA:</b> Implementación de stack de desarrollo asistido (LLMs,
+                        orquestación y herramientas de código),
+
+                        orientado a optimizar el ciclo completo de desarrollo (análisis, diseño, implementación y
+                        validación).</li>
+
+                </ul>
+            </div>
+
+            <div class="job-card">
+                <div class="job-title-row">
+                    <h3>Responsable Técnico (Fullstack, Análisis e Infraestructura)</h3>
+                    <span class="job-date">2014 – 2022</span>
+                </div>
+                <span class="job-company">Ministerio de Educación – Chaco</span>
+                <ul class="achievement-list">
+                    <li><b>Ciclo Completo:</b> Responsable absoluto del análisis, desarrollo fullstack y gestión de la
+                        infraestructura técnica de las plataformas educativas provinciales.</li>
+                    <li><b>Gestión de Misión Crítica:</b> Aseguró la continuidad operativa y la alta disponibilidad
+                        mediante la
+                        administración avanzada de servidores Linux y bases de datos.</li>
+                </ul>
+            </div>
+
+            <div class="job-card">
+                <div class="job-title-row">
+                    <h3>Responsable de Desarrollo e Infraestructura</h3>
+                    <span class="job-date">2011 – 2023</span>
+                </div>
+                <span class="job-company">Ministerio de Salud Pública – Chaco</span>
+                <ul class="achievement-list">
+                    <li><b>Desarrollo Integral:</b> Ejecución integral de sistemas web para redes de salud pública,
+                        abarcando desde el relevamiento de datos hasta la puesta en producción.</li>
+                </ul>
+            </div>
+
+            <div class="job-card">
+                <div class="job-title-row">
+                    <h3>Desarrollador de Software & Consultor</h3>
+                    <span class="job-date">Sector Privado / Freelance</span>
+                </div>
+                <span class="job-company">Nueva Generación | Fundación DeSoCha | Consultoras</span>
+                <ul class="achievement-list">
+                    <li><b>Nueva Generación:</b> Diseño y desarrollo de un sistema de gestión académica integral
+                        (Fullstack).</li>
+                    <li><b>Fundación DeSoCha:</b> Consultoría técnica 360° (Desarrollo, infraestructura y soporte).</li>
+                    <li><b>Consultoras:</b> Arquitectura y desarrollo de soluciones tecnológicas para diversos clientes
+                        corporativos.</li>
+                </ul>
+            </div>
+
+            <h2 class="section-header">Dominio Técnico</h2>
+            <div class="skills-grid">
+                <div class="skill-box">
+                    <h4>Datos & Sistemas Críticos</h4>
+                    <p>Integridad de Datos, Alta Disponibilidad, Resiliencia de Sistemas, Identidad Digital.</p>
+                </div>
+                <div class="skill-box">
+                    <h4>Estrategia IA & Mobile</h4>
+                    <p>Uso de IA en desarrollo de software, optimización de procesos y mejora de calidad de código.</p>
+                </div>
+            </div>
+
+            <h2 class="section-header">Formación Académica</h2>
+            <div class="job-card" style="margin-bottom: 20px;">
+                <div class="job-title-row">
+                    <h3>Técnico Superior en Programación</h3>
+                    <span class="job-date">Teclab / Ministerio Edu. CABA</span>
+                </div>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">Título técnico superior con validez nacional
+                    (Resol. 4519/17).</p>
+            </div>
+            <div class="job-card">
+                <div class="job-title-row">
+                    <h3>Licenciatura en Sistemas de Información</h3>
+                    <span class="job-date">UNNE (Trayectoria Académica)</span>
+                </div>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">Universidad Nacional del Nordeste.</p>
+            </div>
+            </section>
+        </main>
+    </div>
+    
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('bw-theme');
+            const btn = document.querySelector('.theme-toggle-btn');
+            if (document.body.classList.contains('bw-theme')) {
+                btn.innerHTML = '<i class="fas fa-palette"></i> Modo Color';
+            } else {
+                btn.innerHTML = '<i class="fas fa-print"></i> Modo B/N';
+            }
+        }
+    </script>
+</body>
+
+</html>
