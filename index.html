@@ -442,10 +442,17 @@
             color: #333 !important;
         }
 
-        .theme-toggle-btn {
+        .theme-btn-wrapper {
             position: fixed;
             top: 20px;
             right: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 1000;
+        }
+
+        .theme-toggle-btn {
             background: #002347;
             color: white;
             border: none;
@@ -455,8 +462,25 @@
             font-family: 'Inter', sans-serif;
             font-weight: 600;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
             transition: all 0.3s;
+        }
+
+        .theme-close-btn {
+            background: rgba(0,0,0,0.1);
+            color: #333;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+
+        .theme-close-btn:hover {
+            background: rgba(0,0,0,0.2);
         }
 
         body.bw-theme .theme-toggle-btn {
@@ -466,15 +490,18 @@
         }
 
         @media print {
-            .theme-toggle-btn {
-                display: none;
+            .theme-btn-wrapper {
+                display: none !important;
             }
         }
     </style>
 </head>
 
 <body>
-    <button class="theme-toggle-btn" onclick="toggleTheme()"><i class="fas fa-print"></i> Modo B/N</button>
+    <div id="theme-controls" class="theme-btn-wrapper">
+        <button class="theme-toggle-btn" onclick="toggleTheme()"><i class="fas fa-print"></i> Modo B/N</button>
+        <button class="theme-close-btn" onclick="document.getElementById('theme-controls').style.display='none'" title="Ocultar para siempre"><i class="fas fa-times"></i></button>
+    </div>
     <div class="cv-wrapper">
         <!-- Sidebar -->
         <aside class="cv-sidebar">
