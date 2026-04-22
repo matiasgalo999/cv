@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV MATIAS GALO (ANDREA) - Desarrollador Fullstack Senior</title>
+    <title>CV MATIAS GALO ANDREA - Desarrollador Fullstack Senior</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
@@ -329,16 +329,18 @@
             .desktop-visible {
                 display: none;
             }
+
             .desktop-visible.expanded {
                 display: block;
             }
+
             .mobile-only {
                 display: block;
                 width: 100%;
                 text-align: center;
                 background: rgba(255, 255, 255, 0.1);
                 color: #add8e6;
-                border: 1px solid rgba(255,255,255,0.2);
+                border: 1px solid rgba(255, 255, 255, 0.2);
                 padding: 12px;
                 border-radius: 6px;
                 margin-top: 15px;
@@ -348,6 +350,7 @@
                 font-weight: 600;
                 transition: all 0.3s;
             }
+
             body.bw-theme .mobile-only {
                 background: #f0f0f0;
                 color: #333;
@@ -359,7 +362,8 @@
             }
 
             html {
-                font-size: 15px; /* Reduce ligeramente todo el tamaño base rem */
+                font-size: 15px;
+                /* Reduce ligeramente todo el tamaño base rem */
             }
 
             .name-banner h1 {
@@ -371,7 +375,8 @@
                 line-height: 1.4;
             }
 
-            .cv-sidebar, .cv-main {
+            .cv-sidebar,
+            .cv-main {
                 padding: 35px 25px;
             }
 
@@ -474,7 +479,7 @@
         <!-- Sidebar -->
         <aside class="cv-sidebar">
             <div class="name-banner">
-                <h1>MATIAS GALO (ANDREA)</h1>
+                <h1>MATIAS GALO ANDREA</h1>
                 <p>Desarrollador Fullstack Senior | Analista Funcional</p>
             </div>
 
@@ -490,55 +495,58 @@
                 </ul>
             </section>
 
-            <button id="toggle-sidebar-btn" class="mobile-only" onclick="toggleMobileSidebar()">Ver más detalles <i class="fas fa-chevron-down"></i></button>
+            <button id="toggle-sidebar-btn" class="mobile-only" onclick="toggleMobileSidebar()">Ver más detalles <i
+                    class="fas fa-chevron-down"></i></button>
 
             <div id="collapsible-sidebar" class="desktop-visible">
                 <section class="sidebar-section">
-                <h2>Certificaciones Destacadas</h2>
-                <div class="tag-container">
-                    <span class="tag">Desarrollo Estratégico con IA</span>
-                    <span class="tag">Scrum Grand Master (UTN)</span>
-                    <span class="tag">Experto UX/UI (UTN)</span>
-                    <span class="tag">Business Intelligence (UTN)</span>
-                    <span class="tag">Arquitecto Fullstack (UTN)</span>
-                </div>
-            </section>
+                    <h2>Certificaciones Destacadas</h2>
+                    <div class="tag-container">
+                        <span class="tag">Desarrollo Estratégico con IA</span>
+                        <span class="tag">Scrum Grand Master (UTN)</span>
+                        <span class="tag">Experto UX/UI (UTN)</span>
+                        <span class="tag">Business Intelligence (UTN)</span>
+                        <span class="tag">Arquitecto Fullstack (UTN)</span>
+                    </div>
+                </section>
 
-            <section class="sidebar-section">
-                <h2>Stack Tecnológico</h2>
-                <div class="tag-container">
-                    <span class="tag">Symfony (PHP)</span>
-                    <span class="tag">Django (Python)</span>
-                    <span class="tag">Laravel (PHP)</span>
-                    <span class="tag">Express (Node.js)</span>
-                    <span class="tag">Javascript</span>
-                    <span class="tag">React / Angular</span>
-                    <span class="tag">PostgreSQL / MongoDB / MySQL</span>
-                    <span class="tag">React Native</span>
-                    <span class="tag">Linux/Debian (Admin.)</span>
-                </div>
-            </section>
+                <section class="sidebar-section">
+                    <h2>Stack Tecnológico</h2>
+                    <div class="tag-container">
+                        <span class="tag">Symfony (PHP)</span>
+                        <span class="tag">Django (Python)</span>
+                        <span class="tag">Laravel (PHP)</span>
+                        <span class="tag">Express (Node.js)</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">React / Angular</span>
+                        <span class="tag">PostgreSQL / MongoDB / MySQL</span>
+                        <span class="tag">React Native</span>
+                        <span class="tag">Linux/Debian (Admin.)</span>
+                    </div>
+                </section>
 
-            <section class="sidebar-section">
-                <h2>Experiencia Funcional</h2>
-                <div class="tag-container">
-                    <span class="tag">Relevamiento de requerimientos con usuarios</span>
-                    <span class="tag">Modelado de procesos</span>
-                    <span class="tag">Definición de soluciones técnicas alineadas al negocio</span>
-                    <span class="tag">Validación funcional de sistemas</span>
-                </div>
-            </section>
+                <section class="sidebar-section">
+                    <h2>Experiencia Funcional</h2>
+                    <div class="tag-container">
+                        <span class="tag">Relevamiento de requerimientos con usuarios</span>
+                        <span class="tag">Modelado de procesos</span>
+                        <span class="tag">Definición de soluciones técnicas alineadas al negocio</span>
+                        <span class="tag">Validación funcional de sistemas</span>
+                    </div>
+                </section>
 
-            <section class="sidebar-section">
-                <h2>Idiomas</h2>
-                <ul class="contact-info">
-                    <li>Español: Nativo</li>
-                    <li>Inglés: Avanzado (Técnico)</li>
-                </ul>
-            <section class="qr-section">
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://matiasgalo999.github.io/cv/&margin=0" alt="Código QR">
-                <p>Escaneá para ver el CV online</p>
-            </section>
+                <section class="sidebar-section">
+                    <h2>Idiomas</h2>
+                    <ul class="contact-info">
+                        <li>Español: Nativo</li>
+                        <li>Inglés: Avanzado (Técnico)</li>
+                    </ul>
+                </section>
+                <section class="qr-section">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://matiasgalo999.github.io/cv/&margin=0"
+                        alt="Código QR">
+                    <p>Escaneá para ver el CV online</p>
+                </section>
             </div>
         </aside>
 
@@ -547,13 +555,16 @@
             <header class="hero-summary">
                 <p>
                     Desarrollador Fullstack Senior con más de 15 años de experiencia en sistemas de misión crítica,
-                    integración de servicios y manejo de datos sensibles.
+                    integración de servicios y gestión de datos sensibles en entornos de alta demanda.
 
-                    Experiencia en desarrollo mobile y backend, con participación activa en análisis funcional,
-                    relevamiento de requerimientos y diseño de soluciones.
+                    Especializado en desarrollo backend y mobile, con participación activa en análisis funcional,
+                    relevamiento de requerimientos y diseño de soluciones técnicas alineadas al negocio.
 
-                    Enfoque en estabilidad, eficiencia operativa y mejora continua, incorporando herramientas de
-                    inteligencia artificial para optimización del desarrollo.
+                    Experiencia desempeñando funciones en múltiples entornos profesionales, con foco en arquitectura
+                    de sistemas, interoperabilidad y optimización de procesos mediante inteligencia artificial.
+
+                    Enfoque en estabilidad, escalabilidad y eficiencia operativa, priorizando soluciones robustas
+                    y de alto impacto.
                 </p>
             </header>
 
@@ -568,13 +579,13 @@
                 <ul class="achievement-list">
                     <li><b>Interoperabilidad:</b> Integración de múltiples sistemas estatales mediante APIs,
                         consolidando servicios en una plataforma unificada.</li>
-                    <li><b>Escala Masiva:</b> Liderazgo en el diseño e implementación de la solución Mobile para "Tu
-                        Gobierno Digital" (TGD), plataforma de alcance provincial con múltiples servicios
-                        integrados. </li>
+                    <li><b>Escala Masiva:</b> Diseño e implementación de la solución Mobile para "Tu
+                        Gobierno Digital" (TGD), plataforma de alcance provincial con integración de múltiples
+                        organismos y miles de usuarios activos. </li>
                     <li><b>Colaboración en Misión Crítica:</b> Participación activa en el análisis funcional y técnico
                         para la integración de sistemas estatales complejos y trabajo con información sensible y
                         sistemas que requieren alta disponibilidad.</li>
-                    <li><b>Aceleración con IA:</b> Uso de herramientas de IA para asistencia en desarrollo,
+                    <li><b>Aceleración con IA:</b> Implementación de herramientas de IA para acelerar el desarrollo,
                         automatización de tareas y mejora de calidad de código para la optimización del
                         desarrollo mobile, reduciendo tiempos de refactorización y mejora de deuda técnica.</li>
                 </ul>
@@ -633,7 +644,7 @@
             <div class="job-card">
                 <div class="job-title-row">
                     <h3>Responsable de Desarrollo e Infraestructura</h3>
-                    <span class="job-date">2011 – 2023</span>
+                    <span class="job-date">2010 – 2023</span>
                 </div>
                 <span class="job-company">Ministerio de Salud Pública – Chaco</span>
                 <ul class="achievement-list">
@@ -685,7 +696,7 @@
                 </div>
                 <p style="font-size: 0.9rem; color: var(--text-muted);">Universidad Nacional del Nordeste.</p>
             </div>
-            </section>
+
         </main>
     </div>
 
@@ -703,9 +714,9 @@
         function toggleMobileSidebar() {
             const sidebarContent = document.getElementById('collapsible-sidebar');
             const btn = document.getElementById('toggle-sidebar-btn');
-            
+
             sidebarContent.classList.toggle('expanded');
-            
+
             if (sidebarContent.classList.contains('expanded')) {
                 btn.innerHTML = 'Ocultar detalles <i class="fas fa-chevron-up"></i>';
             } else {
