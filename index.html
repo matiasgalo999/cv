@@ -489,7 +489,7 @@
         }
 
         body.bw-theme .skill-box {
-            border-top: 3px solid #667;
+            border-top: 3px solid #666;
         }
 
         body.bw-theme .qr-section p {
@@ -545,6 +545,59 @@
 
         @media print {
             .theme-btn-wrapper {
+                display: none !important;
+            }
+        }
+
+        /* Download Button Styling */
+        .download-container {
+            margin-top: 40px;
+        }
+
+        .download-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: var(--secondary-accent);
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(0, 200, 83, 0.25);
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .download-btn:hover {
+            background: #00a844;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 200, 83, 0.35);
+        }
+
+        .download-btn:active {
+            transform: translateY(0);
+        }
+
+        .download-btn i {
+            font-size: 1.1rem;
+        }
+
+        body.bw-theme .download-btn {
+            background: #333;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        body.bw-theme .download-btn:hover {
+            background: #000;
+        }
+
+        @media print {
+            .download-container {
                 display: none !important;
             }
         }
@@ -627,6 +680,12 @@
                         <li>Inglés: Avanzado (Técnico)</li>
                     </ul>
                 </section>
+
+                <div class="download-container">
+                    <a href="CV_Matias_Galo_Bancario_2026_BN.pdf" download class="download-btn">
+                        <i class="fas fa-file-pdf"></i> Descargar CV (PDF)
+                    </a>
+                </div>
             </div>
         </aside>
 
